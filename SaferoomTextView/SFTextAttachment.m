@@ -59,6 +59,7 @@ The problem with standard NSTextAttachment is that once you set a .image propert
             UIImage *img = [UIImage imageWithData:contentData];
             self.image = img;
             self.attachmentData = contentData;
+        
             self.mimeType = self.fileType;
             self.attachmentFilename = self.fileWrapper.filename;
 

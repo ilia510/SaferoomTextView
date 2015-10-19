@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211BA10093DF1503CE24E4A5 /* libPods-SaferoomTextView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAD1EBEF6CEFC6294D01F /* libPods-SaferoomTextView.a */; };
 		4966BE021BD2789600F24759 /* ImageTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE011BD2789600F24759 /* ImageTestsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4966BE051BD2D9F100F24759 /* UIViewTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE041BD2D9F100F24759 /* UIViewTestsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4966BE081BD4FBCD00F24759 /* SFAttachmentThumbnailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE071BD4FBCD00F24759 /* SFAttachmentThumbnailer.m */; settings = {ASSET_TAGS = (); }; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14EFAD1EBEF6CEFC6294D01F /* libPods-SaferoomTextView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SaferoomTextView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4966BE001BD2789600F24759 /* ImageTestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTestsViewController.h; sourceTree = "<group>"; };
 		4966BE011BD2789600F24759 /* ImageTestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTestsViewController.m; sourceTree = "<group>"; };
 		4966BE031BD2D9F100F24759 /* UIViewTestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewTestsViewController.h; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		496E6C8E1BCEC66700A6160C /* SFTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTextAttachment.h; sourceTree = "<group>"; };
 		496E6C8F1BCEC66700A6160C /* SFTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTextAttachment.m; sourceTree = "<group>"; };
 		496E6C951BD150E900A6160C /* text.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = text.pdf; sourceTree = "<group>"; };
+		C05A1BE1673C6364599FC000 /* Pods-SaferoomTextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaferoomTextView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SaferoomTextView/Pods-SaferoomTextView.debug.xcconfig"; sourceTree = "<group>"; };
+		E0E5B06C3C901689146F4192 /* Pods-SaferoomTextView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaferoomTextView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaferoomTextView/Pods-SaferoomTextView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			files = (
 				496E6C8A1BCEC45F00A6160C /* MobileCoreServices.framework in Frameworks */,
 				496E6C881BCEC45800A6160C /* QuartzCore.framework in Frameworks */,
+				211BA10093DF1503CE24E4A5 /* libPods-SaferoomTextView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B021661FB6C384322DD2559 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14EFAD1EBEF6CEFC6294D01F /* libPods-SaferoomTextView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4966BE091BD53DCF00F24759 /* Subclassing */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +148,8 @@
 				496E6C6D1BCEC39C00A6160C /* SaferoomTextViewTests */,
 				496E6C781BCEC39C00A6160C /* SaferoomTextViewUITests */,
 				496E6C4F1BCEC39C00A6160C /* Products */,
+				822DECABBEC384090C1A05EA /* Pods */,
+				1B021661FB6C384322DD2559 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,6 +212,15 @@
 			path = SaferoomTextViewUITests;
 			sourceTree = "<group>";
 		};
+		822DECABBEC384090C1A05EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C05A1BE1673C6364599FC000 /* Pods-SaferoomTextView.debug.xcconfig */,
+				E0E5B06C3C901689146F4192 /* Pods-SaferoomTextView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 496E6C7E1BCEC39C00A6160C /* Build configuration list for PBXNativeTarget "SaferoomTextView" */;
 			buildPhases = (
+				95B2D100A902E9884FBDF462 /* Check Pods Manifest.lock */,
 				496E6C4A1BCEC39C00A6160C /* Sources */,
 				496E6C4B1BCEC39C00A6160C /* Frameworks */,
 				496E6C4C1BCEC39C00A6160C /* Resources */,
+				E63D6F05DC8B25D3E72068E8 /* Embed Pods Frameworks */,
+				1AFD31DF6AF61FE228A3B101 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,6 +349,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AFD31DF6AF61FE228A3B101 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SaferoomTextView/Pods-SaferoomTextView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95B2D100A902E9884FBDF462 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E63D6F05DC8B25D3E72068E8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SaferoomTextView/Pods-SaferoomTextView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		496E6C4A1BCEC39C00A6160C /* Sources */ = {
@@ -477,6 +552,7 @@
 		};
 		496E6C7F1BCEC39C00A6160C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05A1BE1673C6364599FC000 /* Pods-SaferoomTextView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SaferoomTextView/Info.plist;
@@ -488,6 +564,7 @@
 		};
 		496E6C801BCEC39C00A6160C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0E5B06C3C901689146F4192 /* Pods-SaferoomTextView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SaferoomTextView/Info.plist;
