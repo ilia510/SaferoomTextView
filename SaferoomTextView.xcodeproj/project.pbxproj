@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4966BE021BD2789600F24759 /* ImageTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE011BD2789600F24759 /* ImageTestsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4966BE051BD2D9F100F24759 /* UIViewTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE041BD2D9F100F24759 /* UIViewTestsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4966BE081BD4FBCD00F24759 /* SFAttachmentThumbnailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE071BD4FBCD00F24759 /* SFAttachmentThumbnailer.m */; settings = {ASSET_TAGS = (); }; };
+		4966BE0F1BD5434700F24759 /* SFMIMEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE0E1BD5434700F24759 /* SFMIMEUtils.m */; settings = {ASSET_TAGS = (); }; };
+		4966BE121BD548C800F24759 /* SFContentConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE111BD548C800F24759 /* SFContentConstants.m */; settings = {ASSET_TAGS = (); }; };
+		496E6C531BCEC39C00A6160C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C521BCEC39C00A6160C /* main.m */; };
+		496E6C561BCEC39C00A6160C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C551BCEC39C00A6160C /* AppDelegate.m */; };
+		496E6C591BCEC39C00A6160C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C581BCEC39C00A6160C /* ViewController.m */; };
+		496E6C5C1BCEC39C00A6160C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496E6C5A1BCEC39C00A6160C /* Main.storyboard */; };
+		496E6C5F1BCEC39C00A6160C /* SaferoomTextView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C5D1BCEC39C00A6160C /* SaferoomTextView.xcdatamodeld */; };
+		496E6C611BCEC39C00A6160C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496E6C601BCEC39C00A6160C /* Assets.xcassets */; };
+		496E6C641BCEC39C00A6160C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496E6C621BCEC39C00A6160C /* LaunchScreen.storyboard */; };
+		496E6C6F1BCEC39C00A6160C /* SaferoomTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C6E1BCEC39C00A6160C /* SaferoomTextViewTests.m */; };
+		496E6C7A1BCEC39C00A6160C /* SaferoomTextViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C791BCEC39C00A6160C /* SaferoomTextViewUITests.m */; };
+		496E6C881BCEC45800A6160C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496E6C871BCEC45800A6160C /* QuartzCore.framework */; };
+		496E6C8A1BCEC45F00A6160C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496E6C891BCEC45F00A6160C /* MobileCoreServices.framework */; };
+		496E6C8D1BCEC50C00A6160C /* SFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C8C1BCEC50C00A6160C /* SFTextView.m */; settings = {ASSET_TAGS = (); }; };
+		496E6C901BCEC66700A6160C /* SFTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C8F1BCEC66700A6160C /* SFTextAttachment.m */; settings = {ASSET_TAGS = (); }; };
+		496E6C961BD150E900A6160C /* text.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496E6C951BD150E900A6160C /* text.pdf */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		496E6C6B1BCEC39C00A6160C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 496E6C461BCEC39C00A6160C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 496E6C4D1BCEC39C00A6160C;
+			remoteInfo = SaferoomTextView;
+		};
+		496E6C761BCEC39C00A6160C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 496E6C461BCEC39C00A6160C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 496E6C4D1BCEC39C00A6160C;
+			remoteInfo = SaferoomTextView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4966BE001BD2789600F24759 /* ImageTestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTestsViewController.h; sourceTree = "<group>"; };
+		4966BE011BD2789600F24759 /* ImageTestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTestsViewController.m; sourceTree = "<group>"; };
+		4966BE031BD2D9F100F24759 /* UIViewTestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewTestsViewController.h; sourceTree = "<group>"; };
+		4966BE041BD2D9F100F24759 /* UIViewTestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTestsViewController.m; sourceTree = "<group>"; };
+		4966BE061BD4FBCD00F24759 /* SFAttachmentThumbnailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAttachmentThumbnailer.h; sourceTree = "<group>"; };
+		4966BE071BD4FBCD00F24759 /* SFAttachmentThumbnailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAttachmentThumbnailer.m; sourceTree = "<group>"; };
+		4966BE0D1BD5434700F24759 /* SFMIMEUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMIMEUtils.h; sourceTree = "<group>"; };
+		4966BE0E1BD5434700F24759 /* SFMIMEUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMIMEUtils.m; sourceTree = "<group>"; };
+		4966BE101BD548C800F24759 /* SFContentConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFContentConstants.h; sourceTree = "<group>"; };
+		4966BE111BD548C800F24759 /* SFContentConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFContentConstants.m; sourceTree = "<group>"; };
+		496E6C4E1BCEC39C00A6160C /* SaferoomTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaferoomTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		496E6C521BCEC39C00A6160C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		496E6C541BCEC39C00A6160C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		496E6C551BCEC39C00A6160C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		496E6C571BCEC39C00A6160C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		496E6C581BCEC39C00A6160C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		496E6C5B1BCEC39C00A6160C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		496E6C5E1BCEC39C00A6160C /* SaferoomTextView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaferoomTextView.xcdatamodel; sourceTree = "<group>"; };
+		496E6C601BCEC39C00A6160C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		496E6C631BCEC39C00A6160C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		496E6C651BCEC39C00A6160C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		496E6C6A1BCEC39C00A6160C /* SaferoomTextViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaferoomTextViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		496E6C6E1BCEC39C00A6160C /* SaferoomTextViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaferoomTextViewTests.m; sourceTree = "<group>"; };
+		496E6C701BCEC39C00A6160C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		496E6C751BCEC39C00A6160C /* SaferoomTextViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaferoomTextViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		496E6C791BCEC39C00A6160C /* SaferoomTextViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaferoomTextViewUITests.m; sourceTree = "<group>"; };
+		496E6C7B1BCEC39C00A6160C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		496E6C871BCEC45800A6160C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		496E6C891BCEC45F00A6160C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		496E6C8B1BCEC50C00A6160C /* SFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTextView.h; sourceTree = "<group>"; };
+		496E6C8C1BCEC50C00A6160C /* SFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTextView.m; sourceTree = "<group>"; };
+		496E6C8E1BCEC66700A6160C /* SFTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTextAttachment.h; sourceTree = "<group>"; };
+		496E6C8F1BCEC66700A6160C /* SFTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTextAttachment.m; sourceTree = "<group>"; };
+		496E6C951BD150E900A6160C /* text.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = text.pdf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		496E6C4B1BCEC39C00A6160C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496E6C8A1BCEC45F00A6160C /* MobileCoreServices.framework in Frameworks */,
+				496E6C881BCEC45800A6160C /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		496E6C671BCEC39C00A6160C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		496E6C721BCEC39C00A6160C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4966BE091BD53DCF00F24759 /* Subclassing */ = {
+			isa = PBXGroup;
+			children = (
+				4966BE0D1BD5434700F24759 /* SFMIMEUtils.h */,
+				4966BE0E1BD5434700F24759 /* SFMIMEUtils.m */,
+				496E6C8B1BCEC50C00A6160C /* SFTextView.h */,
+				496E6C8C1BCEC50C00A6160C /* SFTextView.m */,
+				496E6C8E1BCEC66700A6160C /* SFTextAttachment.h */,
+				496E6C8F1BCEC66700A6160C /* SFTextAttachment.m */,
+				4966BE061BD4FBCD00F24759 /* SFAttachmentThumbnailer.h */,
+				4966BE071BD4FBCD00F24759 /* SFAttachmentThumbnailer.m */,
+				4966BE101BD548C800F24759 /* SFContentConstants.h */,
+				4966BE111BD548C800F24759 /* SFContentConstants.m */,
+			);
+			name = Subclassing;
+			sourceTree = "<group>";
+		};
+		496E6C451BCEC39C00A6160C = {
+			isa = PBXGroup;
+			children = (
+				496E6C891BCEC45F00A6160C /* MobileCoreServices.framework */,
+				496E6C871BCEC45800A6160C /* QuartzCore.framework */,
+				496E6C501BCEC39C00A6160C /* SaferoomTextView */,
+				496E6C6D1BCEC39C00A6160C /* SaferoomTextViewTests */,
+				496E6C781BCEC39C00A6160C /* SaferoomTextViewUITests */,
+				496E6C4F1BCEC39C00A6160C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		496E6C4F1BCEC39C00A6160C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				496E6C4E1BCEC39C00A6160C /* SaferoomTextView.app */,
+				496E6C6A1BCEC39C00A6160C /* SaferoomTextViewTests.xctest */,
+				496E6C751BCEC39C00A6160C /* SaferoomTextViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		496E6C501BCEC39C00A6160C /* SaferoomTextView */ = {
+			isa = PBXGroup;
+			children = (
+				496E6C951BD150E900A6160C /* text.pdf */,
+				496E6C541BCEC39C00A6160C /* AppDelegate.h */,
+				496E6C551BCEC39C00A6160C /* AppDelegate.m */,
+				4966BE091BD53DCF00F24759 /* Subclassing */,
+				496E6C571BCEC39C00A6160C /* ViewController.h */,
+				496E6C581BCEC39C00A6160C /* ViewController.m */,
+				496E6C5A1BCEC39C00A6160C /* Main.storyboard */,
+				4966BE031BD2D9F100F24759 /* UIViewTestsViewController.h */,
+				4966BE041BD2D9F100F24759 /* UIViewTestsViewController.m */,
+				4966BE001BD2789600F24759 /* ImageTestsViewController.h */,
+				4966BE011BD2789600F24759 /* ImageTestsViewController.m */,
+				496E6C601BCEC39C00A6160C /* Assets.xcassets */,
+				496E6C621BCEC39C00A6160C /* LaunchScreen.storyboard */,
+				496E6C651BCEC39C00A6160C /* Info.plist */,
+				496E6C5D1BCEC39C00A6160C /* SaferoomTextView.xcdatamodeld */,
+				496E6C511BCEC39C00A6160C /* Supporting Files */,
+			);
+			path = SaferoomTextView;
+			sourceTree = "<group>";
+		};
+		496E6C511BCEC39C00A6160C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				496E6C521BCEC39C00A6160C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		496E6C6D1BCEC39C00A6160C /* SaferoomTextViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				496E6C6E1BCEC39C00A6160C /* SaferoomTextViewTests.m */,
+				496E6C701BCEC39C00A6160C /* Info.plist */,
+			);
+			path = SaferoomTextViewTests;
+			sourceTree = "<group>";
+		};
+		496E6C781BCEC39C00A6160C /* SaferoomTextViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				496E6C791BCEC39C00A6160C /* SaferoomTextViewUITests.m */,
+				496E6C7B1BCEC39C00A6160C /* Info.plist */,
+			);
+			path = SaferoomTextViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		496E6C4D1BCEC39C00A6160C /* SaferoomTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 496E6C7E1BCEC39C00A6160C /* Build configuration list for PBXNativeTarget "SaferoomTextView" */;
+			buildPhases = (
+				496E6C4A1BCEC39C00A6160C /* Sources */,
+				496E6C4B1BCEC39C00A6160C /* Frameworks */,
+				496E6C4C1BCEC39C00A6160C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SaferoomTextView;
+			productName = SaferoomTextView;
+			productReference = 496E6C4E1BCEC39C00A6160C /* SaferoomTextView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		496E6C691BCEC39C00A6160C /* SaferoomTextViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 496E6C811BCEC39C00A6160C /* Build configuration list for PBXNativeTarget "SaferoomTextViewTests" */;
+			buildPhases = (
+				496E6C661BCEC39C00A6160C /* Sources */,
+				496E6C671BCEC39C00A6160C /* Frameworks */,
+				496E6C681BCEC39C00A6160C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				496E6C6C1BCEC39C00A6160C /* PBXTargetDependency */,
+			);
+			name = SaferoomTextViewTests;
+			productName = SaferoomTextViewTests;
+			productReference = 496E6C6A1BCEC39C00A6160C /* SaferoomTextViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		496E6C741BCEC39C00A6160C /* SaferoomTextViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 496E6C841BCEC39C00A6160C /* Build configuration list for PBXNativeTarget "SaferoomTextViewUITests" */;
+			buildPhases = (
+				496E6C711BCEC39C00A6160C /* Sources */,
+				496E6C721BCEC39C00A6160C /* Frameworks */,
+				496E6C731BCEC39C00A6160C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				496E6C771BCEC39C00A6160C /* PBXTargetDependency */,
+			);
+			name = SaferoomTextViewUITests;
+			productName = SaferoomTextViewUITests;
+			productReference = 496E6C751BCEC39C00A6160C /* SaferoomTextViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		496E6C461BCEC39C00A6160C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Secomsoft;
+				TargetAttributes = {
+					496E6C4D1BCEC39C00A6160C = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					496E6C691BCEC39C00A6160C = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 496E6C4D1BCEC39C00A6160C;
+					};
+					496E6C741BCEC39C00A6160C = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 496E6C4D1BCEC39C00A6160C;
+					};
+				};
+			};
+			buildConfigurationList = 496E6C491BCEC39C00A6160C /* Build configuration list for PBXProject "SaferoomTextView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 496E6C451BCEC39C00A6160C;
+			productRefGroup = 496E6C4F1BCEC39C00A6160C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				496E6C4D1BCEC39C00A6160C /* SaferoomTextView */,
+				496E6C691BCEC39C00A6160C /* SaferoomTextViewTests */,
+				496E6C741BCEC39C00A6160C /* SaferoomTextViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		496E6C4C1BCEC39C00A6160C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496E6C961BD150E900A6160C /* text.pdf in Resources */,
+				496E6C641BCEC39C00A6160C /* LaunchScreen.storyboard in Resources */,
+				496E6C611BCEC39C00A6160C /* Assets.xcassets in Resources */,
+				496E6C5C1BCEC39C00A6160C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		496E6C681BCEC39C00A6160C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		496E6C731BCEC39C00A6160C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		496E6C4A1BCEC39C00A6160C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4966BE0F1BD5434700F24759 /* SFMIMEUtils.m in Sources */,
+				496E6C901BCEC66700A6160C /* SFTextAttachment.m in Sources */,
+				4966BE051BD2D9F100F24759 /* UIViewTestsViewController.m in Sources */,
+				496E6C591BCEC39C00A6160C /* ViewController.m in Sources */,
+				4966BE081BD4FBCD00F24759 /* SFAttachmentThumbnailer.m in Sources */,
+				4966BE021BD2789600F24759 /* ImageTestsViewController.m in Sources */,
+				496E6C5F1BCEC39C00A6160C /* SaferoomTextView.xcdatamodeld in Sources */,
+				4966BE121BD548C800F24759 /* SFContentConstants.m in Sources */,
+				496E6C561BCEC39C00A6160C /* AppDelegate.m in Sources */,
+				496E6C531BCEC39C00A6160C /* main.m in Sources */,
+				496E6C8D1BCEC50C00A6160C /* SFTextView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		496E6C661BCEC39C00A6160C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496E6C6F1BCEC39C00A6160C /* SaferoomTextViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		496E6C711BCEC39C00A6160C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496E6C7A1BCEC39C00A6160C /* SaferoomTextViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		496E6C6C1BCEC39C00A6160C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 496E6C4D1BCEC39C00A6160C /* SaferoomTextView */;
+			targetProxy = 496E6C6B1BCEC39C00A6160C /* PBXContainerItemProxy */;
+		};
+		496E6C771BCEC39C00A6160C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 496E6C4D1BCEC39C00A6160C /* SaferoomTextView */;
+			targetProxy = 496E6C761BCEC39C00A6160C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		496E6C5A1BCEC39C00A6160C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				496E6C5B1BCEC39C00A6160C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		496E6C621BCEC39C00A6160C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				496E6C631BCEC39C00A6160C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		496E6C7C1BCEC39C00A6160C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		496E6C7D1BCEC39C00A6160C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		496E6C7F1BCEC39C00A6160C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SaferoomTextView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.secomsoft.SaferoomTextView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		496E6C801BCEC39C00A6160C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SaferoomTextView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.secomsoft.SaferoomTextView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		496E6C821BCEC39C00A6160C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SaferoomTextViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.secomsoft.SaferoomTextViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaferoomTextView.app/SaferoomTextView";
+			};
+			name = Debug;
+		};
+		496E6C831BCEC39C00A6160C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SaferoomTextViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.secomsoft.SaferoomTextViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaferoomTextView.app/SaferoomTextView";
+			};
+			name = Release;
+		};
+		496E6C851BCEC39C00A6160C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SaferoomTextViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.secomsoft.SaferoomTextViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SaferoomTextView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		496E6C861BCEC39C00A6160C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SaferoomTextViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.secomsoft.SaferoomTextViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SaferoomTextView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		496E6C491BCEC39C00A6160C /* Build configuration list for PBXProject "SaferoomTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496E6C7C1BCEC39C00A6160C /* Debug */,
+				496E6C7D1BCEC39C00A6160C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		496E6C7E1BCEC39C00A6160C /* Build configuration list for PBXNativeTarget "SaferoomTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496E6C7F1BCEC39C00A6160C /* Debug */,
+				496E6C801BCEC39C00A6160C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		496E6C811BCEC39C00A6160C /* Build configuration list for PBXNativeTarget "SaferoomTextViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496E6C821BCEC39C00A6160C /* Debug */,
+				496E6C831BCEC39C00A6160C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		496E6C841BCEC39C00A6160C /* Build configuration list for PBXNativeTarget "SaferoomTextViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496E6C851BCEC39C00A6160C /* Debug */,
+				496E6C861BCEC39C00A6160C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		496E6C5D1BCEC39C00A6160C /* SaferoomTextView.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				496E6C5E1BCEC39C00A6160C /* SaferoomTextView.xcdatamodel */,
+			);
+			currentVersion = 496E6C5E1BCEC39C00A6160C /* SaferoomTextView.xcdatamodel */;
+			path = SaferoomTextView.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 496E6C461BCEC39C00A6160C /* Project object */;
+}
