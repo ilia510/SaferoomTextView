@@ -28,6 +28,7 @@ static NSString * SFSF_MIME_TYPE_MP4_VIDEO = @"video/mp4";
 static NSString * SFSF_MIME_TYPE_INK = @"application/vnd.evernote.ink";
 static NSString * SFSF_MIME_TYPE_PDF = @"application/pdf";
 static NSString * SFSF_MIME_TYPE_DEFAULT = @"application/octet-stream";
+static NSString * SFSF_THUMBNAIL_FILENAME_PREFIX = @"thumbnail_";
 static NSMutableSet * SFSF_MIME_TYPES;
 static NSMutableSet * SFSF_INDEXABLE_RESOURCE_MIME_TYPES;
 
@@ -116,6 +117,11 @@ static NSMutableSet * SFSF_INDEXABLE_RESOURCE_MIME_TYPES;
 + (NSString *) SF_MIME_TYPE_DEFAULT{
     return SFSF_MIME_TYPE_DEFAULT;
 }
+
++ (NSString *) SF_THUMBNAIL_FILENAME_PREFIX{
+    return SFSF_THUMBNAIL_FILENAME_PREFIX;
+}
+
 + (NSMutableSet *) SF_MIME_TYPES{
     return SFSF_MIME_TYPES;
 }

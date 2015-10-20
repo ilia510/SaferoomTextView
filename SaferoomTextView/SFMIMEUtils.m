@@ -168,7 +168,7 @@
     
     NSString *thumbName = nil;
     
-    thumbName = [NSString stringWithFormat:@"file_%@",[SFMIMEUtils fileExtensionForMIMEType:mime]];
+    thumbName = [NSString stringWithFormat:@"%@%@",[SFContentConstants SF_THUMBNAIL_FILENAME_PREFIX],[SFMIMEUtils fileExtensionForMIMEType:mime]];
     
     return thumbName;
     

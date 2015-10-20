@@ -114,7 +114,7 @@
     
     if (self.textHeight == 0) {
         
-        self.textHeight = 10;//default is 15
+        self.textHeight = 12;//default is 15
     }
     
     
@@ -122,7 +122,7 @@
     
     [self.attachmentTextLabel setTextColor:[UIColor blackColor]];
     [self.attachmentTextLabel setBackgroundColor:[UIColor clearColor]];
-    [self.attachmentTextLabel setFont:[UIFont systemFontOfSize:10.0f]];
+    [self.attachmentTextLabel setFont:[UIFont systemFontOfSize:11.0f]];
     
     [self.attachmentTextLabel setText:self.fileName];
     

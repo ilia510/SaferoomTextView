@@ -72,7 +72,7 @@
 
 
 /**
- *  This method will do all the heavy lifting in converting standard NSTextAttachment into SaferoomTextAttachment.
+ *  This method will do all the heavy lifting in converting standard NSTextAttachment into SFTextAttachment.
  *
  *  @param textStorage - textStorage of the textView
  *  @param editedMask  - edited mask
@@ -97,30 +97,41 @@
                  //FLOG(@" textAttachment found");
                  NSLog(@" textAttachment class is %@", [obj class]);
                  
-                 NSTextAttachment *attachment = obj;
+                 //Here we need to avoid transforming already created SFTextAttachments
                  
-                 NSLog(@"Added attachment. \n Content size:%lu \nFile type:%@ \n Filename:%@ ",[attachment.contents length],attachment.fileType,attachment.fileWrapper.filename);
-                 
-                 SFTextAttachment *sfAttachment = [[SFTextAttachment alloc] initWithData:attachment.contents ofType:attachment.fileType];
-                 
-                 
-                 
-                 /*
-                 
-                  This is the code used by Duncan - it adds an image to .image property. 
-                  
-                 if (attachment.image) {
-                     NSLog(@" attachment.image found");
-                     sfAttachment = [[SFTextAttachment alloc] initWithData:UIImagePNGRepresentation(attachment.image) ofType:attachment.fileType];
+                 if ([obj class] == [NSTextAttachment class]) {
+                     
+                     NSTextAttachment *attachment = obj;
+                     
+                     NSLog(@"Added attachment. \nContent size:%lu \nFile type:%@ \nFilename:%@ ",[attachment.contents length],attachment.fileType,attachment.fileWrapper.filename);
+                     
+                     SFTextAttachment *sfAttachment = [[SFTextAttachment alloc] initWithData:attachment.contents ofType:attachment.fileType];
+                     
+                     
+                     
+                     /*
+                      
+                      This is the code used by Duncan - it adds an image to .image property.
+                      
+                      if (attachment.image) {
+                      NSLog(@" attachment.image found");
+                      sfAttachment = [[SFTextAttachment alloc] initWithData:UIImagePNGRepresentation(attachment.image) ofType:attachment.fileType];
+                      }
+                      else {
+                      NSLog(@" attachment.image is nil");
+                      sfAttachment = [[SFTextAttachment alloc] initWithData:attachment.fileWrapper.regularFileContents ofType:attachment.fileType];
+                      }
+                      */
+                     
+                     
+                     [dict setValue:sfAttachment forKey:key];
+                     
+                 } else {
+                     
+                     NSLog(@"Attachment is SFTextAttachment. No need to convert.");
                  }
-                 else {
-                     NSLog(@" attachment.image is nil");
-                     sfAttachment = [[SFTextAttachment alloc] initWithData:attachment.fileWrapper.regularFileContents ofType:attachment.fileType];
-                 }
-                 */
-                 
-                 
-                 [dict setValue:sfAttachment forKey:key];
+                     
+
              }
              
          }];

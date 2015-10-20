@@ -31,9 +31,9 @@
                                             <action selector="attachPDF:" destination="BYZ-38-t0r" id="MNC-MU-lE8"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="VC with ImageTests" id="yYT-ff-OQ8">
+                                    <barButtonItem title="Audio" id="yYT-ff-OQ8">
                                         <connections>
-                                            <segue destination="iFE-hA-2JT" kind="show" id="TKx-A5-kKV"/>
+                                            <action selector="addAudio:" destination="BYZ-38-t0r" id="INa-oA-c8w"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="UIView Tests" id="8ZS-Bx-aHU">
@@ -49,7 +49,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTX-Qf-Z3q" customClass="SFTextView">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.38248922413793102" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.38248922413793102" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -109,14 +109,14 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKC-ac-oei">
                                 <rect key="frame" x="170" y="64" width="240" height="128"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JzF-VI-bqo">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JzF-VI-bqo">
                                         <rect key="frame" x="20" y="0.0" width="136" height="52"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pdf2" translatesAutoresizingMaskIntoConstraints="NO" id="LKq-ZV-b4o">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pdf2" translatesAutoresizingMaskIntoConstraints="NO" id="LKq-ZV-b4o">
                                                 <rect key="frame" x="52" y="0.0" width="32" height="32"/>
                                                 <animations/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="filename.extension" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-XG-o5E">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="filename.extension" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-XG-o5E">
                                                 <rect key="frame" x="0.0" y="32" width="136" height="20"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -163,105 +163,6 @@
             </objects>
             <point key="canvasLocation" x="1585" y="1094"/>
         </scene>
-        <!--Image Tests View Controller-->
-        <scene sceneID="EQD-0r-SND">
-            <objects>
-                <viewController id="iFE-hA-2JT" customClass="ImageTestsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FIB-yK-1ag"/>
-                        <viewControllerLayoutGuide type="bottom" id="qoO-Qr-zH8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NSx-dH-NQP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pdf" translatesAutoresizingMaskIntoConstraints="NO" id="b8h-I4-Une">
-                                <rect key="frame" x="170" y="64" width="250" height="120"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="41m-Sc-xyA"/>
-                                    <constraint firstAttribute="height" constant="120" id="7JH-7g-k41"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncM-05-S4B">
-                                <rect key="frame" x="233" y="233" width="97" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="cbh-0Y-WtN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIa-Vi-Nka">
-                                <rect key="frame" x="145" y="237" width="48" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QeZ-oc-n5V">
-                                <rect key="frame" x="233" y="277" width="97" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUQ-PL-ynl">
-                                <rect key="frame" x="145" y="281" width="48" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW1-DM-KMf">
-                                <rect key="frame" x="247" y="336" width="69" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Draw Text"/>
-                                <connections>
-                                    <action selector="drawText:" destination="iFE-hA-2JT" eventType="touchUpInside" id="mhb-G9-CNR"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pdf2" translatesAutoresizingMaskIntoConstraints="NO" id="bS1-Vj-1gC">
-                                <rect key="frame" x="180" y="394" width="240" height="128"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="VwG-0K-sD2"/>
-                                    <constraint firstAttribute="width" constant="240" id="Xaz-bn-91N"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="qoO-Qr-zH8" firstAttribute="top" secondItem="FUQ-PL-ynl" secondAttribute="bottom" constant="298" id="5LU-Ss-GxX"/>
-                            <constraint firstItem="ncM-05-S4B" firstAttribute="trailing" secondItem="QeZ-oc-n5V" secondAttribute="trailing" id="6zq-WA-hjv"/>
-                            <constraint firstItem="HIa-Vi-Nka" firstAttribute="leading" secondItem="NSx-dH-NQP" secondAttribute="leading" constant="145" id="8Vn-Zj-2gb"/>
-                            <constraint firstItem="bS1-Vj-1gC" firstAttribute="top" secondItem="YW1-DM-KMf" secondAttribute="bottom" constant="28" id="8wq-wU-mpY"/>
-                            <constraint firstItem="HIa-Vi-Nka" firstAttribute="top" secondItem="b8h-I4-Une" secondAttribute="bottom" constant="53" id="HpN-iO-QT3"/>
-                            <constraint firstItem="YW1-DM-KMf" firstAttribute="top" secondItem="QeZ-oc-n5V" secondAttribute="bottom" constant="29" id="KdK-td-T34"/>
-                            <constraint firstItem="bS1-Vj-1gC" firstAttribute="centerX" secondItem="NSx-dH-NQP" secondAttribute="centerX" id="L04-C2-ruO"/>
-                            <constraint firstItem="HIa-Vi-Nka" firstAttribute="leading" secondItem="FUQ-PL-ynl" secondAttribute="leading" id="MZs-Cz-4T2"/>
-                            <constraint firstItem="ncM-05-S4B" firstAttribute="leading" secondItem="QeZ-oc-n5V" secondAttribute="leading" id="f91-O2-lCF"/>
-                            <constraint firstItem="QeZ-oc-n5V" firstAttribute="centerY" secondItem="FUQ-PL-ynl" secondAttribute="centerY" id="gdb-8h-CtR"/>
-                            <constraint firstItem="ncM-05-S4B" firstAttribute="leading" secondItem="HIa-Vi-Nka" secondAttribute="trailing" constant="40" id="gmV-j4-6PF"/>
-                            <constraint firstItem="b8h-I4-Une" firstAttribute="centerX" secondItem="NSx-dH-NQP" secondAttribute="centerX" constant="-5" id="jBS-OY-ylh"/>
-                            <constraint firstItem="QeZ-oc-n5V" firstAttribute="top" secondItem="ncM-05-S4B" secondAttribute="bottom" constant="14" id="jdP-8R-TKJ"/>
-                            <constraint firstItem="HIa-Vi-Nka" firstAttribute="centerY" secondItem="ncM-05-S4B" secondAttribute="centerY" id="kIh-MH-QrJ"/>
-                            <constraint firstItem="FUQ-PL-ynl" firstAttribute="top" secondItem="HIa-Vi-Nka" secondAttribute="bottom" constant="23" id="oI4-90-KH4"/>
-                            <constraint firstItem="YW1-DM-KMf" firstAttribute="centerX" secondItem="QeZ-oc-n5V" secondAttribute="centerX" id="vYQ-MB-vjv"/>
-                            <constraint firstItem="b8h-I4-Une" firstAttribute="top" secondItem="FIB-yK-1ag" secondAttribute="bottom" id="y59-se-a4Y"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="b8h-I4-Une" id="zTb-FT-cnH"/>
-                        <outlet property="imageView2" destination="bS1-Vj-1gC" id="PcM-oF-eCH"/>
-                        <outlet property="textX" destination="ncM-05-S4B" id="F1d-UT-eQT"/>
-                        <outlet property="textY" destination="QeZ-oc-n5V" id="2g5-WB-nRx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vdM-S5-cHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1893" y="350"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="HFw-nz-bz2">
             <objects>
@@ -283,7 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pdf" width="96" height="96"/>
         <image name="pdf2" width="200" height="100"/>
     </resources>
 </document>

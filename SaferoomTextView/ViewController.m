@@ -11,13 +11,15 @@
 #import "SFTextAttachment.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "SFMIMEUtils.h"
+#import <IQAudioRecorderController.h>
 
-@interface ViewController () <UITextViewDelegate,NSTextStorageDelegate>
+@interface ViewController () <UITextViewDelegate,NSTextStorageDelegate, IQAudioRecorderControllerDelegate>
 @property (weak, nonatomic) IBOutlet SFTextView *textView;
 @property (strong, nonatomic) NSAttributedString *pdfAttach;
 - (IBAction)addImage:(id)sender;
 - (IBAction)processTextView:(id)sender;
 - (IBAction)attachPDF:(id)sender;
+- (IBAction)addAudio:(id)sender;
 
 @end
 
@@ -221,7 +223,6 @@
     
     NSAttributedString *strAttached = [NSAttributedString attributedStringWithAttachment:pdfAttach];
     
-    NSAttributedString *string = [[NSAttributedString alloc] initWithString:@"asjhfjkdshfj" attributes:NULL];
     
     [str replaceCharactersInRange:self.textView.selectedRange withAttributedString:strAttached];
     
@@ -229,39 +230,65 @@
     
 }
 
--(UIImage *)addText:(UIImage *)image text:(NSString *)text{
+- (IBAction)addAudio:(id)sender {
     
-    CGRect rect = CGRectMake(0,0,image.size.width,image.size.height);
-    
-    // create a context according to image size
-    UIGraphicsBeginImageContext(rect.size);
-    
-    
-    // draw image
-    [image drawInRect:rect];
+    IQAudioRecorderController *controller = [[IQAudioRecorderController alloc] init];
+    controller.delegate = self;
+    [self presentViewController:controller animated:YES completion:nil];
     
     
-    UIFont* font = [UIFont systemFontOfSize:14.0];
     
-    /// Make a copy of the default paragraph style
-    NSMutableParagraphStyle* paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    /// Set line break mode
-    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
-    /// Set text alignment
-    paragraphStyle.alignment = NSTextAlignmentCenter;
-    
-    NSDictionary *attributes = @{ NSFontAttributeName: font,
-                                  NSParagraphStyleAttributeName: paragraphStyle };
-    
-    //CGRect textRect = CGRectMake(0,0,);
-    
-    /// draw text
-    [text drawInRect:rect withAttributes:attributes];
-    
-    // get as image
-    UIImage * image2 = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return image2;
 }
+
+-(void)audioRecorderController:(IQAudioRecorderController *)controller didFinishWithAudioAtPath:(NSString *)filePath
+{
+    NSURL *fileAudioURL = [NSURL fileURLWithPath:filePath];
+    
+    NSData *audioFile = [NSData dataWithContentsOfURL:fileAudioURL];
+    
+    NSLog(@"filename is:%@",filePath);
+    
+    NSLog(@"Size of audio file is:%lu",(unsigned long)[audioFile length]);
+    
+    NSTextAttachment *audio = [[NSTextAttachment alloc] initWithData:audioFile ofType:[SFMIMEUtils determineMIMETypeForFile:[fileAudioURL lastPathComponent]]];
+  
+    
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
+    
+    NSAttributedString *strAttached = [NSAttributedString attributedStringWithAttachment:audio];
+    
+    [str replaceCharactersInRange:self.textView.selectedRange withAttributedString:strAttached];
+    
+    NSFileManager *manager = [[NSFileManager alloc] init];
+    
+    
+    //we need to clean up the file
+    
+    NSError *error;
+    
+    [manager removeItemAtURL:fileAudioURL error:&error];
+    
+    if (error) {
+        
+        NSLog(@"Error removing audio recording file:%@", error);
+        
+    }
+    
+    
+    self.textView.attributedText = str;
+    
+    
+}
+
+-(void)audioRecorderControllerDidCancel:(IQAudioRecorderController *)controller
+{
+    //Notifying that user has clicked cancel.
+    
+    NSLog(@"Cancel audio recording");
+    
+    [controller dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
 @end
