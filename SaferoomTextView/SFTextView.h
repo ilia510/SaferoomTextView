@@ -16,10 +16,10 @@
     float _scale;
     long _firstLineCharsInserted;
 }
-
+/*
 - (void)sizeText:(id)sender;
 - (void)formatText:(id)sender;
 - (void)adjustHeight:(float)height;
 - (void)restoreHeight;
-
+*/
 @end

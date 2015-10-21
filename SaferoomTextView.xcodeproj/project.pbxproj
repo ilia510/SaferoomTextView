@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		211BA10093DF1503CE24E4A5 /* libPods-SaferoomTextView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAD1EBEF6CEFC6294D01F /* libPods-SaferoomTextView.a */; };
-		4966BE021BD2789600F24759 /* ImageTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE011BD2789600F24759 /* ImageTestsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4966BE051BD2D9F100F24759 /* UIViewTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE041BD2D9F100F24759 /* UIViewTestsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4966BE081BD4FBCD00F24759 /* SFAttachmentThumbnailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE071BD4FBCD00F24759 /* SFAttachmentThumbnailer.m */; settings = {ASSET_TAGS = (); }; };
 		4966BE0F1BD5434700F24759 /* SFMIMEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966BE0E1BD5434700F24759 /* SFMIMEUtils.m */; settings = {ASSET_TAGS = (); }; };
@@ -26,7 +25,6 @@
 		496E6C8A1BCEC45F00A6160C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496E6C891BCEC45F00A6160C /* MobileCoreServices.framework */; };
 		496E6C8D1BCEC50C00A6160C /* SFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C8C1BCEC50C00A6160C /* SFTextView.m */; settings = {ASSET_TAGS = (); }; };
 		496E6C901BCEC66700A6160C /* SFTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E6C8F1BCEC66700A6160C /* SFTextAttachment.m */; settings = {ASSET_TAGS = (); }; };
-		496E6C961BD150E900A6160C /* text.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496E6C951BD150E900A6160C /* text.pdf */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +46,6 @@
 
 /* Begin PBXFileReference section */
 		14EFAD1EBEF6CEFC6294D01F /* libPods-SaferoomTextView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SaferoomTextView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4966BE001BD2789600F24759 /* ImageTestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTestsViewController.h; sourceTree = "<group>"; };
-		4966BE011BD2789600F24759 /* ImageTestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTestsViewController.m; sourceTree = "<group>"; };
 		4966BE031BD2D9F100F24759 /* UIViewTestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewTestsViewController.h; sourceTree = "<group>"; };
 		4966BE041BD2D9F100F24759 /* UIViewTestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTestsViewController.m; sourceTree = "<group>"; };
 		4966BE061BD4FBCD00F24759 /* SFAttachmentThumbnailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAttachmentThumbnailer.h; sourceTree = "<group>"; };
@@ -81,7 +77,6 @@
 		496E6C8C1BCEC50C00A6160C /* SFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTextView.m; sourceTree = "<group>"; };
 		496E6C8E1BCEC66700A6160C /* SFTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTextAttachment.h; sourceTree = "<group>"; };
 		496E6C8F1BCEC66700A6160C /* SFTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTextAttachment.m; sourceTree = "<group>"; };
-		496E6C951BD150E900A6160C /* text.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = text.pdf; sourceTree = "<group>"; };
 		C05A1BE1673C6364599FC000 /* Pods-SaferoomTextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaferoomTextView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SaferoomTextView/Pods-SaferoomTextView.debug.xcconfig"; sourceTree = "<group>"; };
 		E0E5B06C3C901689146F4192 /* Pods-SaferoomTextView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaferoomTextView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaferoomTextView/Pods-SaferoomTextView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +161,6 @@
 		496E6C501BCEC39C00A6160C /* SaferoomTextView */ = {
 			isa = PBXGroup;
 			children = (
-				496E6C951BD150E900A6160C /* text.pdf */,
 				496E6C541BCEC39C00A6160C /* AppDelegate.h */,
 				496E6C551BCEC39C00A6160C /* AppDelegate.m */,
 				4966BE091BD53DCF00F24759 /* Subclassing */,
@@ -175,8 +169,6 @@
 				496E6C5A1BCEC39C00A6160C /* Main.storyboard */,
 				4966BE031BD2D9F100F24759 /* UIViewTestsViewController.h */,
 				4966BE041BD2D9F100F24759 /* UIViewTestsViewController.m */,
-				4966BE001BD2789600F24759 /* ImageTestsViewController.h */,
-				4966BE011BD2789600F24759 /* ImageTestsViewController.m */,
 				496E6C601BCEC39C00A6160C /* Assets.xcassets */,
 				496E6C621BCEC39C00A6160C /* LaunchScreen.storyboard */,
 				496E6C651BCEC39C00A6160C /* Info.plist */,
@@ -327,7 +319,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				496E6C961BD150E900A6160C /* text.pdf in Resources */,
 				496E6C641BCEC39C00A6160C /* LaunchScreen.storyboard in Resources */,
 				496E6C611BCEC39C00A6160C /* Assets.xcassets in Resources */,
 				496E6C5C1BCEC39C00A6160C /* Main.storyboard in Resources */,
@@ -408,7 +399,6 @@
 				4966BE051BD2D9F100F24759 /* UIViewTestsViewController.m in Sources */,
 				496E6C591BCEC39C00A6160C /* ViewController.m in Sources */,
 				4966BE081BD4FBCD00F24759 /* SFAttachmentThumbnailer.m in Sources */,
-				4966BE021BD2789600F24759 /* ImageTestsViewController.m in Sources */,
 				496E6C5F1BCEC39C00A6160C /* SaferoomTextView.xcdatamodeld in Sources */,
 				4966BE121BD548C800F24759 /* SFContentConstants.m in Sources */,
 				496E6C561BCEC39C00A6160C /* AppDelegate.m in Sources */,

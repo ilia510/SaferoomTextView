@@ -23,22 +23,29 @@ The problem with standard NSTextAttachment is that once you set a .image propert
 
 @implementation SFTextAttachment
 
-- (id)initWithData:(NSData *)contentData ofType:(NSString *)mime {
-    //FLOG(@"initWithData called");
+- (id)initWithData:(NSData *)contentData ofType:(NSString *)uti {
+    NSLog(@"initWithData called");
     //FLOG(@"uti is %@", uti);
-    self = [super initWithData:contentData ofType:mime];
+    self = [super initWithData:contentData ofType:uti];
     
     if (self) {
         
-        NSLog(@"uti is:%@",mime);
+        NSString *mime = [[NSString alloc] init];
+        
+        mime = [SFMIMEUtils mimeTypeForUTI:uti];
+        
+        NSLog(@"uti is:%@, mime is:%@",uti,mime);
+        NSLog(@"contentData length:%lu",(unsigned long)[contentData length]);
+        NSLog(@"regularFile content length:%lu",[self.fileWrapper.regularFileContents length]);
+        
+        self.attachmentData = contentData;
+        self.fileType = mime;
+        self.sfFileWrapper = self.fileWrapper;
+        self.attachmentFilename = self.fileWrapper.filename;
         
         if (![mime containsString:@"image"]) {
             NSLog(@"Attachment is other type.");
-            
-            self.attachmentData = contentData;
-            self.fileType = mime;
-            self.sfFileWrapper = self.fileWrapper;
-            self.attachmentFilename = self.fileWrapper.filename;
+
             
             if (!self.attachmentFilename || [self.attachmentFilename isEqualToString:@""]) {
                 
@@ -54,14 +61,42 @@ The problem with standard NSTextAttachment is that once you set a .image propert
             
         } else {
             
-            NSLog(@"Attachment is image.");
+            NSLog(@"NSTextAttachment is image.");
             
-            UIImage *img = [UIImage imageWithData:contentData];
+            UIImage *img = [UIImage new];
+            
+            img = [UIImage imageWithData:contentData];
+            
+            /*
+            if ([contentData length] !=0) {
+               
+                NSLog(@"Image came with ContentData");
+                
+               img = [UIImage imageWithData:contentData];
+                
+            } else if (self.fileWrapper.regularFileContents != 0) {
+                
+                NSLog(@"Image came with File Contents");
+                img = [UIImage imageWithData:self.fileWrapper.regularFileContents];
+                
+            } else if (self.image) {
+                
+                NSLog(@"Image came with image property");
+                img = self.image;
+                
+            } else {
+                
+                NSLog(@"Detected image, but used thumbnail.");
+                
+                SFAttachmentThumbnailer *thumbnail = [[SFAttachmentThumbnailer alloc] initWithAttachmentFilename:self.attachmentFilename
+                                                                                                    withFileType:mime
+                                                                                                         andSize:CGSizeMake(150, 60)];
+                //after this method all original NSTextAttachment fields will be nulled
+                img = [thumbnail buildImageForFilename];
+            }*/
+            
             self.image = img;
-            self.attachmentData = contentData;
-        
-            self.mimeType = self.fileType;
-            self.attachmentFilename = self.fileWrapper.filename;
+
 
         }
         

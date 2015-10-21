@@ -81,7 +81,7 @@
  */
 
 - (void)textStorage:(NSTextStorage *)textStorage didProcessEditing:(NSTextStorageEditActions)editedMask range:(NSRange)editedRange changeInLength:(NSInteger)delta {
-    NSLog(@"textStorage:didProcessEditing:range:changeInLength: called. ChangeInLength:%ld",(long)delta);
+    //NSLog(@"textStorage:didProcessEditing:range:changeInLength: called. ChangeInLength:%ld",(long)delta);
     __block NSMutableDictionary *dict;
     
     
@@ -93,7 +93,11 @@
          // Iterate over each attribute and look for attachments
          [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
              
-             if ([[key description] isEqualToString:NSAttachmentAttributeName]) {
+            //NSLog(@"KEY:%@, OBJ:%@",key,obj);
+             
+            //I have no idea why NSAttachmentAttribute name cannot be used here.
+             
+             if ([[key description] isEqualToString:@"NSAttachment"]) {
                  //FLOG(@" textAttachment found");
                  NSLog(@" textAttachment class is %@", [obj class]);
                  
@@ -104,9 +108,32 @@
                      NSTextAttachment *attachment = obj;
                      
                      NSLog(@"Added attachment. \nContent size:%lu \nFile type:%@ \nFilename:%@ ",[attachment.contents length],attachment.fileType,attachment.fileWrapper.filename);
+                     NSLog(@"NStextAttachment image:%lu",[[[attachment fileWrapper] regularFileContents] length]);
                      
-                     SFTextAttachment *sfAttachment = [[SFTextAttachment alloc] initWithData:attachment.contents ofType:attachment.fileType];
+                     NSData *attachmentData = [[NSData alloc] init];
                      
+                     if ([attachment.contents length] != 0) {
+                         
+                         NSLog(@"Data came with ContentData");
+                         attachmentData = [attachment contents];
+                         
+                     } else if (attachment.fileWrapper.regularFileContents != 0) {
+                         
+                         NSLog(@"Data came with File Contents");
+                         attachmentData = attachment.fileWrapper.regularFileContents;
+                         
+                     } else if (attachment.image) {
+                         
+                         NSLog(@"Data came with image property");
+                         attachmentData = UIImagePNGRepresentation(attachment.image);
+                         
+                     } else {
+                         
+                         NSLog(@"NStextAttachment data is nil");
+                         attachmentData = nil;
+                     }
+                     
+                     SFTextAttachment *sfAttachment = [[SFTextAttachment alloc] initWithData:attachmentData ofType:attachment.fileType];
                      
                      
                      /*
@@ -126,10 +153,7 @@
                      
                      [dict setValue:sfAttachment forKey:key];
                      
-                 } else {
-                     
-                     NSLog(@"Attachment is SFTextAttachment. No need to convert.");
-                 }
+                 } 
                      
 
              }

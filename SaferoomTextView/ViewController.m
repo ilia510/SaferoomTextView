@@ -71,34 +71,7 @@
         //NSLog(@"Selected image size:%lu",(unsigned long)[imageData length]);
         
        NSTextAttachment *attachment = [[NSTextAttachment alloc] initWithData:imageData ofType:@"image/png"];
-        /*
-         if ([[NSUserDefaults standardUserDefaults] integerForKey:@"scaleImages"] == 1) {
-         
-         attachment.image = [self scaleImage:image];
-         
-         } else {
-         
-         attachment.image = image;
-         }*/
         
-        //attachment.image = image;
-
-        /**
-         *  This is a testing of PDF data
-        
-        NSURL *pdfDoc = [[NSBundle mainBundle] URLForResource:@"text" withExtension:@"pdf"];
-        
-        
-        NSData *pdfData = [NSData dataWithContentsOfURL:pdfDoc];
-        
-        NSLog(@"Size of pdf data:%lu",(unsigned long)[pdfData length]);
-        
-        NSTextAttachment *pdfAttach = [[NSTextAttachment alloc] initWithData:pdfData ofType:[SFMIMEUtils determineMIMETypeForFile:[pdfDoc lastPathComponent]]];
-        
-        //pdfAttach.image = imgText;
-        
-        //Adding image to the current cursor position
-          */
         [currentString replaceCharactersInRange:self.textView.selectedRange withAttributedString:[NSAttributedString attributedStringWithAttachment:attachment]];
         
         
